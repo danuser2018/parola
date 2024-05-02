@@ -15,6 +15,11 @@ servidor.
 
 Actualmente, el proyecto se encuentra en desarrollo y no existe una versión estable.
 
+## Reconocimiento
+
+1. [Laura Reen](https://www.iconfinder.com/laurareen), por el [icono del perezoso](https://www.iconfinder.com/icons/4043272/avatar_lazybones_sloth_sluggard_icon)
+utilizado en la aplicación.
+
 ## Licencia
 
 MIT License

@@ -21,6 +21,8 @@
 
     <modules>
         <module>application</module>
+        <module>domain</module>
+        <module>infra-swing</module>
     </modules>
 
     <properties>

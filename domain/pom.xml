@@ -8,37 +8,10 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>application</artifactId>
-
-    <dependencies>
-        <dependency>
-            <groupId>me.danuser2018</groupId>
-            <artifactId>domain</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>me.danuser2018</groupId>
-            <artifactId>infra-swing</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-    </dependencies>
+    <artifactId>domain</artifactId>
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <skip>false</skip>
-                    <mainClass>me.danuser2018.parola.ParolaApplication</mainClass>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
