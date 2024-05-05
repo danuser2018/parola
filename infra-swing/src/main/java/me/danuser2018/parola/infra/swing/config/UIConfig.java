@@ -3,15 +3,23 @@
 package me.danuser2018.parola.infra.swing.config;
 
 import com.formdev.flatlaf.FlatDarkLaf;
+import me.danuser2018.parola.infra.swing.NoHeadlessUIAdapter;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ResourceBundleMessageSource;
 
 import javax.swing.*;
-import java.util.Locale;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
 
 @Configuration
+@ConditionalOnBean(NoHeadlessUIAdapter.class)
 public class UIConfig {
+
+    private static final String BASE_PATH = "infra-swing/src/main/resources/";
 
     public UIConfig() {
         FlatDarkLaf.setup();
@@ -26,12 +34,20 @@ public class UIConfig {
     }
 
     @Bean
-    public Locale locale() {
-        return Locale.getDefault();
+    public SimpleDateFormat dateFormat() {
+        return new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
     }
 
     @Bean
-    public ImageIcon mainIcon() {
-        return new ImageIcon("infra-swing/src/main/resources/main.png");
+    public ImageIcon logoIcon() {
+        return new ImageIcon(BASE_PATH + "main.png");
+    }
+
+    @Bean
+    public ImageIcon sendIcon() { return new ImageIcon(BASE_PATH + "send.png"); }
+
+    @Bean
+    public String messagesTemplate() throws IOException {
+        return new String(Files.readAllBytes(Paths.get(BASE_PATH + "label.html")));
     }
 }

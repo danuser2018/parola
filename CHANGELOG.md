@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Initial version of the user interface based on swing. It just opens an empty dialog. 
+- User interface based on swing
 
 ## [1.5.0] - 2024-05-01
 

@@ -17,8 +17,11 @@ Actualmente, el proyecto se encuentra en desarrollo y no existe una versión est
 
 ## Reconocimiento
 
-1. [Laura Reen](https://www.iconfinder.com/laurareen), por el [icono del perezoso](https://www.iconfinder.com/icons/4043272/avatar_lazybones_sloth_sluggard_icon)
-utilizado en la aplicación.
+1. [Carlo Rodriguez](https://www.iconfinder.com/carlorodriguez), por el [logo de la aplicación](https://www.iconfinder.com/icons/512533/communicate_conversation_speak_talk_icon), 
+utilizado bajo licencia **Free for commercial use** de [IconFinder](https://www.iconfinder.com/). No se han realizado modificaciones al mismo.
+
+2. [khulqi-rosyid](https://www.iconfinder.com/khulqi-rosyid), por el [icono de envío](https://www.iconfinder.com/icons/11055060/right_arrow_arrow_direction_navigation_send_forward_direct_icon)
+utilizado en la aplicación, bajo licencia [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). No se han realizado modificaciones al mismo.
 
 ## Licencia
 

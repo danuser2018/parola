@@ -6,7 +6,7 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.danuser2018.parola.domain.port.outbound.StartUIPort;
-import me.danuser2018.parola.infra.swing.component.MainFrame;
+import me.danuser2018.parola.infra.swing.component.MainJFrame;
 import org.springframework.context.annotation.ConditionContext;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.core.type.AnnotatedTypeMetadata;
@@ -29,10 +29,10 @@ public class NoHeadlessUIAdapter implements StartUIPort {
     }
 
     @NonNull
-    private final MainFrame mainFrame;
+    private final MainJFrame mainJFrame;
 
     @Override
     public void startUI() {
-        SwingUtilities.invokeLater(() -> mainFrame.setVisible(true));
+        SwingUtilities.invokeLater(() -> mainJFrame.setVisible(true));
     }
 }
