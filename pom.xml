@@ -8,7 +8,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.2.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
 
     <groupId>me.danuser2018</groupId>
@@ -23,6 +23,7 @@
         <module>application</module>
         <module>domain</module>
         <module>infra-swing</module>
+        <module>infra-libp2p</module>
     </modules>
 
     <properties>

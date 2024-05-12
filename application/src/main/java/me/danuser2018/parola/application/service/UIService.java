@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 
-package me.danuser2018.parola.application;
+// SPDX-License-Identifier: MIT
+
+package me.danuser2018.parola.application.service;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
