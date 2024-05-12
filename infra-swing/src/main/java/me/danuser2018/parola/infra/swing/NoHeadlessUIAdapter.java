@@ -10,13 +10,13 @@ import me.danuser2018.parola.infra.swing.component.MainJFrame;
 import org.springframework.context.annotation.ConditionContext;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.core.type.AnnotatedTypeMetadata;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.swing.*;
 import java.awt.*;
 
 @Slf4j
-@Component
+@Repository
 @Conditional(NoHeadlessUIAdapter.Condition.class)
 @RequiredArgsConstructor
 public class NoHeadlessUIAdapter implements StartUIPort {

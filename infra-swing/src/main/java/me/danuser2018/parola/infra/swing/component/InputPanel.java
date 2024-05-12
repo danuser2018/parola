@@ -3,6 +3,8 @@
 package me.danuser2018.parola.infra.swing.component;
 
 import lombok.NonNull;
+import me.danuser2018.parola.domain.model.Message;
+import me.danuser2018.parola.domain.port.inbound.SendMessagePort;
 import me.danuser2018.parola.infra.swing.NoHeadlessUIAdapter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.stereotype.Component;
@@ -18,7 +20,7 @@ public class InputPanel extends JPanel {
     public InputPanel(
             @NonNull MaxLengthInputFilter maxLengthInputFilter,
             @NonNull ImageIcon sendIcon,
-            @NonNull MessageHandler messageHandler
+            @NonNull SendMessagePort sendMessagePort
     ) {
         super(new GridBagLayout());
         setBorder(new EmptyBorder(10, 20, 20, 20));
@@ -57,8 +59,8 @@ public class InputPanel extends JPanel {
         messageField.addActionListener(event -> sendButton.doClick());
         sendButton.addActionListener(event -> {
             final var message = messageField.getText();
-            if (message !=null && !message.trim().isEmpty()) {
-                messageHandler.handleMessage("Anonymous", message, System.currentTimeMillis());
+            if (message != null && !message.trim().isEmpty()) {
+                sendMessagePort.send(new Message("Anonymous", message, System.currentTimeMillis()));
             }
             messageField.setText("");
             messageField.requestFocus();
