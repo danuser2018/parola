@@ -26,6 +26,11 @@
             <artifactId>infra-libp2p</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>me.danuser2018</groupId>
+            <artifactId>infra-cache-guava</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>

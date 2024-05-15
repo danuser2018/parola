@@ -5,23 +5,31 @@
 package me.danuser2018.parola.application.service;
 
 import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
 import me.danuser2018.parola.domain.port.outbound.StartNodePort;
 import me.danuser2018.parola.domain.port.outbound.StopNodePort;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 @Service
-@RequiredArgsConstructor
 public class NodeService {
 
-    @NonNull
-    private final StartNodePort startNodePort;
+    private StartNodePort startNodePort;
 
-    @NonNull
-    private final StopNodePort stopNodePort;
+    private StopNodePort stopNodePort;
+
+    @Autowired
+    public void setStartNodePort(@Lazy @NonNull final StartNodePort startNodePort) {
+        this.startNodePort = startNodePort;
+    }
+
+    @Autowired
+    public void setStopNodePort(@Lazy @NonNull final StopNodePort stopNodePort) {
+        this.stopNodePort = stopNodePort;
+    }
 
     public void startNode() {
-       startNodePort.startNode();
+        startNodePort.startNode();
     }
 
     public void stopNode() {

@@ -24,6 +24,7 @@
         <module>domain</module>
         <module>infra-swing</module>
         <module>infra-libp2p</module>
+        <module>infra-cache-guava</module>
     </modules>
 
     <properties>
