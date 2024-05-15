@@ -31,9 +31,11 @@ public class MessageHandler {
         Date date = new Date(timestamp);
         String dateStr = dateFormat.format(date);
 
+        ImageIcon identicon = new Identicon(nickname).getImageIcon(50);
         String message = String.format(messagesTemplate.trim(), nickname, dateStr, messageText);
 
         JLabel messageLabel = new JLabel(message);
+        messageLabel.setIcon(identicon);
         messageLabel.setBorder(BorderFactory.createEmptyBorder(0, 0, 10, 0));
 
         messagesPanel.add(messageLabel);
