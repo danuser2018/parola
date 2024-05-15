@@ -37,7 +37,6 @@ class LibP2pNodeAdapter(
     }
 
     override fun sendMessage(message: Message) {
-        log.info("Sending message [${message}] ...")
 
         val p2pMessage = message.toP2pMessage()
 
