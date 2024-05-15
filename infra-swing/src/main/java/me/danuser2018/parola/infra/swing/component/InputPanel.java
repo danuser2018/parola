@@ -60,7 +60,7 @@ public class InputPanel extends JPanel {
         sendButton.addActionListener(event -> {
             final var message = messageField.getText();
             if (message != null && !message.trim().isEmpty()) {
-                sendMessagePort.send(new Message("Anonymous", message, System.currentTimeMillis()));
+                sendMessagePort.send(message);
             }
             messageField.setText("");
             messageField.requestFocus();

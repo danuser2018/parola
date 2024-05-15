@@ -6,5 +6,5 @@ import lombok.NonNull;
 import me.danuser2018.parola.domain.model.Message;
 
 public interface SendMessagePort {
-    void send(@NonNull Message message);
+    void send(@NonNull String message);
 }

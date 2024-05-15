@@ -18,7 +18,7 @@ public class MaxLengthInputFilter extends PlainDocument {
     private final int maxLength;
 
     public MaxLengthInputFilter(
-            @Value("${messages.max-length:255}") int maxLength
+            @Value("${user-interface.messages.max-length:255}") int maxLength
     ) {
         this.maxLength = maxLength;
     }
